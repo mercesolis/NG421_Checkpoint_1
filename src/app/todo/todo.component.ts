@@ -9,10 +9,13 @@ import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-m
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  @Input() todo
-  constructor(private todoService : TodoService, private modalService : NgbModal) { }
-  todoTitle = ''
+  @Input() todo;
+  constructor(private todoService : TodoService, private modalService: NgbModal) { }
+  todoTitle = '';
+  isEditing = false;
+  statuses: string[];
   ngOnInit() {
+    this.statuses = this.todoService.getStatuses();
   }
   async deleteTodo(todo){
     let result;
@@ -27,6 +30,9 @@ export class TodoComponent implements OnInit {
     catch(ex){
       
     }
+  }
+  editTodo() {
+    
   }
 
 

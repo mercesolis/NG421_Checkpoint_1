@@ -13,6 +13,8 @@ export class TodoListComponent implements OnInit {
     return this.todoService.getTodos(this.status);
   }
   @Input()status: string;
+
+  
   constructor(private todoService : TodoService) { }
 
   ngOnInit() {
