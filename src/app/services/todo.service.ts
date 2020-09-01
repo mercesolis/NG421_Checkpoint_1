@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import {ITodo} from '../interfaces/itodo';
+import {TODO_DATA} from '../data/todo-data';
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
+
+  items: ITodo[] = [];
   todoId: number = 0;
   todoList: ITodo [] = [
     // example of how to make an item in todo list
@@ -12,8 +15,11 @@ export class TodoService {
   ]
   
   statuses: string[] = ['Todo', 'Doing', 'Done'];
-  constructor() { }
+  constructor() { 
+    this.items = TODO_DATA;
+  }
   getTodos(status: string ): ITodo[] {
+
     if (!status) {
     return this.todoList;
     }
@@ -31,5 +37,9 @@ export class TodoService {
 
   getStatuses(): string [] {
     return this.statuses;
+  }
+
+  getItems(): ITodo[] {
+    return this.items;
   }
 }
