@@ -12,6 +12,7 @@ import { BoardComponent } from './board/board.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoTableComponent } from './todo-table/todo-table.component';
+import { MatTableModule } from '@angular/material/table';
 
 const routes = [];
 const appRoutes = RouterModule.forRoot(routes);
@@ -32,7 +33,8 @@ const appRoutes = RouterModule.forRoot(routes);
     appRoutes,
     FormsModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
