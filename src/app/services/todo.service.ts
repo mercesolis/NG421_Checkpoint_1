@@ -12,7 +12,7 @@ export class TodoService {
     // example of how to make an item in todo list
     { title: 'Install Angular CLI', id: this.todoId, status: 'Todo', createdAt: new Date()  },
   
-  ]
+  ];
   
   statuses: string[] = ['Todo', 'Doing', 'Done'];
   constructor() { 
@@ -43,3 +43,5 @@ export class TodoService {
     return this.items;
   }
 }
+
+
