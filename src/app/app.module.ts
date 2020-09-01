@@ -32,6 +32,6 @@ const appRoutes = RouterModule.forRoot(routes);
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ConfirmationModalComponent]
+  entryComponents: [ConfirmationModalComponent, TodoEditComponent]
 })
 export class AppModule { }
