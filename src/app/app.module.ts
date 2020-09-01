@@ -34,7 +34,8 @@ const appRoutes = RouterModule.forRoot(routes);
     FormsModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
